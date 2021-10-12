@@ -11,13 +11,11 @@ public class Menu {
 
     private String name;
 
-    private String iconcls;
+    private String iconCls;
 
-    private Boolean keepalive;
+    private Meta meta;
 
-    private Boolean requireauth;
-
-    private Integer parentid;
+    private Integer parentId;
 
     private Boolean enabled;
 
@@ -61,36 +59,28 @@ public class Menu {
         this.name = name == null ? null : name.trim();
     }
 
-    public String getIconcls() {
-        return iconcls;
+    public String getIconCls() {
+        return iconCls;
     }
 
-    public void setIconcls(String iconcls) {
-        this.iconcls = iconcls == null ? null : iconcls.trim();
+    public void setIconCls(String iconCls) {
+        this.iconCls = iconCls == null ? null : iconCls.trim();
     }
 
-    public Boolean getKeepalive() {
-        return keepalive;
+    public Meta getMeta() {
+        return meta;
     }
 
-    public void setKeepalive(Boolean keepalive) {
-        this.keepalive = keepalive;
+    public void setMeta(Meta meta) {
+        this.meta = meta;
     }
 
-    public Boolean getRequireauth() {
-        return requireauth;
+    public Integer getParentId() {
+        return parentId;
     }
 
-    public void setRequireauth(Boolean requireauth) {
-        this.requireauth = requireauth;
-    }
-
-    public Integer getParentid() {
-        return parentid;
-    }
-
-    public void setParentid(Integer parentid) {
-        this.parentid = parentid;
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
     }
 
     public Boolean getEnabled() {
