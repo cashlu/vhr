@@ -1,5 +1,7 @@
 package cn.com.tobetop.vhr.entity;
 
+import java.util.List;
+
 public class Menu {
     private Integer id;
 
@@ -19,9 +21,12 @@ public class Menu {
 
     private Boolean enabled;
 
+    private List<Menu> children;
+
     public Integer getId() {
         return id;
     }
+
 
     public void setId(Integer id) {
         this.id = id;
@@ -89,5 +94,13 @@ public class Menu {
 
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public List<Menu> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<Menu> children) {
+        this.children = children;
     }
 }
