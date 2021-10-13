@@ -1,8 +1,11 @@
 package cn.com.tobetop.vhr.mapper;
 
 import cn.com.tobetop.vhr.entity.Menu;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
 
+@Repository
 public interface MenuMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -15,4 +18,6 @@ public interface MenuMapper {
     int updateByPrimaryKeySelective(Menu record);
 
     int updateByPrimaryKey(Menu record);
+
+    List<Menu> getMenuByHrId(Integer hrId);
 }
