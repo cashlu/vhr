@@ -26,4 +26,10 @@ public class MenuService {
         // 从内存中获取当前登录用户的ID
         return menuMapper.getMenuByHrId(((Hr) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId());
     }
+
+    // TODO: 这个方法在每次前端发送请求时，都会调用，应该使用缓存！
+    //@Cacheable
+    public List<Menu> getAllMenusWithRole() {
+        return menuMapper.getAllMenusWithRole();
+    }
 }
