@@ -29,6 +29,13 @@
         from hr
         where username=#{username}
     </select>
+    <select id="getHrRolesById" resultType="cn.com.tobetop.vhr.entity.Role">
+        select r.*
+        from role r,
+             hr_role hrr
+        where r.id = hrr.rid
+          and hrr.hrid = #{id}
+    </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
         delete

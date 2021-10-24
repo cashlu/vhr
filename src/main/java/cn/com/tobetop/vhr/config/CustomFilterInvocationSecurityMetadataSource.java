@@ -21,7 +21,7 @@ import java.util.List;
  * @create: 2021-10-17 02:57
  **/
 @Component
-public class MyFilter implements FilterInvocationSecurityMetadataSource {
+public class CustomFilterInvocationSecurityMetadataSource implements FilterInvocationSecurityMetadataSource {
 
     @Autowired
     MenuService menuService;

@@ -17,4 +17,20 @@ public class HelloController {
     public String hello(){
         return "Hello";
     }
+
+    /**
+     * 测试访问员工基本资料的权限控制是否正确。
+     */
+    @GetMapping("/employee/basic/hello")
+    public String basicInfoTest(){
+        return "员工基本资料";
+    }
+
+    /**
+     * 测试访问员工高级资料的权限控制是否正确。
+     */
+    @GetMapping("/employee/advanced/hello")
+    public String advancedInfoTest(){
+        return "员工高级资料";
+    }
 }

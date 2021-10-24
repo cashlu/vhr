@@ -1,7 +1,10 @@
 package cn.com.tobetop.vhr.mapper;
 
 import cn.com.tobetop.vhr.entity.Hr;
+import cn.com.tobetop.vhr.entity.Role;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public interface HrMapper {
@@ -18,4 +21,6 @@ public interface HrMapper {
     int updateByPrimaryKey(Hr record);
 
     Hr loadUserByUsername(String username);
+
+    List<Role> getHrRolesById(Integer id);
 }

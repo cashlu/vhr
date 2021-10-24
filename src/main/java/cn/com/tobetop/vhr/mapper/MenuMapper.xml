@@ -46,9 +46,13 @@
         <collection property="roles" ofType="cn.com.tobetop.vhr.entity.Role">
             <id column="rid" property="id"/>
             <result column="rname" property="name"/>
-            <result column="rnameZh" property="namezh"/>
+            <result column="rnameZh" property="nameZh"/>
         </collection>
     </resultMap>
+    <!--
+    requireAuth字段在本项目中无用，因为本字段的本来作用是，前端用来控制该权限是否需要登录，但是该功能由后端通过
+    角色来控制了，所以前端也并没有判断这个字段。
+    -->
     <select id="getMenuByHrId" resultMap="Menu2">
         select distinct m1.*,
                         m2.id          as id2,
