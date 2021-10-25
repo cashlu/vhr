@@ -29,9 +29,9 @@ public class CustomFilterInvocationSecurityMetadataSource implements FilterInvoc
 
     /**
      * 根据前端发送的请求url，查询数据库，获取该请求允许的角色列表。
-     * @param o
+     *
+     * @param o 请求对象
      * @return 本次请求需要的角色
-     * @throws IllegalArgumentException
      */
     @Override
     public Collection<ConfigAttribute> getAttributes(Object o) throws IllegalArgumentException {
