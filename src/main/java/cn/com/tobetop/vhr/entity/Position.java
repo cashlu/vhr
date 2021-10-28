@@ -1,13 +1,20 @@
 package cn.com.tobetop.vhr.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
+
+/**
+ * @Author Cash
+ */
 public class Position {
     private Integer id;
 
     private String name;
 
-    private Date createdate;
+    @JsonFormat(pattern = "yyyy-MM-dd  hh:mm:ss", timezone = "Asia/Shanghai")
+    private Date createDate;
 
     private Boolean enabled;
 
@@ -27,12 +34,12 @@ public class Position {
         this.name = name == null ? null : name.trim();
     }
 
-    public Date getCreatedate() {
-        return createdate;
+    public Date getCreateDate() {
+        return createDate;
     }
 
-    public void setCreatedate(Date createdate) {
-        this.createdate = createdate;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 
     public Boolean getEnabled() {

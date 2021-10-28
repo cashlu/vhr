@@ -1,4 +1,4 @@
-package cn.com.tobetop.vhr.controller;
+package cn.com.tobetop.vhr.controller.config;
 
 import cn.com.tobetop.vhr.entity.Menu;
 import cn.com.tobetop.vhr.service.MenuService;
