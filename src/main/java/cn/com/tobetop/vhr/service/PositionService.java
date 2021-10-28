@@ -62,4 +62,14 @@ public class PositionService {
     public Integer deletePositionById(Integer id) {
         return positionMapper.deleteByPrimaryKey(id);
     }
+
+    /**
+     * 根据ID列表，批量删除职位信息。
+     *
+     * @param ids ID的List集合。
+     * @return 删除（受影响）的行数。
+     */
+    public Integer batchDeletePositionByIds(List<Integer> ids) {
+        return positionMapper.batchDeletePositionByIds(ids);
+    }
 }

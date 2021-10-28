@@ -2,6 +2,7 @@ package cn.com.tobetop.vhr.mapper;
 
 import cn.com.tobetop.vhr.entity.Position;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -52,4 +53,11 @@ public interface PositionMapper {
      */
     List<Position> getAllPositions();
 
+    /**
+     * 根据ID列表，批量删除职位信息。
+     *
+     * @param ids ID的List集合。
+     * @return 删除（受影响）的行数。
+     */
+    Integer batchDeletePositionByIds(@Param("ids") List<Integer> ids);
 }

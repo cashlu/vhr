@@ -25,6 +25,12 @@
         from position
         where id = #{id,jdbcType=INTEGER}
     </delete>
+    <delete id="batchDeletePositionByIds" parameterType="List">
+        delete from position where id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
     <insert id="insert" parameterType="cn.com.tobetop.vhr.entity.Position">
         insert into position (id, name, createDate,
                               enabled)

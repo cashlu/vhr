@@ -6,6 +6,8 @@ import cn.com.tobetop.vhr.service.PositionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @Program: vhr
  * @Description: 职位管理的Controller
@@ -74,5 +76,19 @@ public class PositionController {
             return RespBean.ok("职位删除成功");
         }
         return RespBean.error("职位删除失败");
+    }
+
+    /**
+     * 根据ID列表删除职位信息。
+     *
+     * @param ids 职位信息的ID列表
+     * @return 删除成功返回RespBean.ok(), 否则返回RespBean.error()。
+     */
+    @DeleteMapping("/")
+    public RespBean batchDeletePositionByIds(@RequestBody List<Integer> ids) {
+        if (positionService.batchDeletePositionByIds(ids) == ids.size()) {
+            return RespBean.ok("批量删除职位成功！");
+        }
+        return RespBean.error("批量删除职位失败！");
     }
 }
