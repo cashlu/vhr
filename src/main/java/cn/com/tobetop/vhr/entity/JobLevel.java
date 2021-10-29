@@ -1,5 +1,7 @@
 package cn.com.tobetop.vhr.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 /**
@@ -11,7 +13,7 @@ public class JobLevel {
     private String name;
 
     private String titleLevel;
-
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "Asia/Shanghai")
     private Date createDate;
 
     private Boolean enabled;
