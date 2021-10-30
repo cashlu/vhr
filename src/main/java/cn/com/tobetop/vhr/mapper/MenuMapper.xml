@@ -49,6 +49,19 @@
             <result column="rnameZh" property="nameZh"/>
         </collection>
     </resultMap>
+    <!--具有嵌套关系的Menu树，因为确定菜单只有两级，可以用这种方式，如果层级不定，需要用递归。-->
+    <resultMap id="MenuWithChildren" type="cn.com.tobetop.vhr.entity.Menu" extends="BaseResultMap">
+        <id column="id1" property="id"/>
+        <result column="name1" property="name"/>
+        <collection property="children" ofType="cn.com.tobetop.vhr.entity.Menu">
+            <id column="id2" property="id"/>
+            <result column="name2" property="name"/>
+            <collection property="children" ofType="cn.com.tobetop.vhr.entity.Menu">
+                <id column="id3" property="id"/>
+                <result column="name3" property="name"/>
+            </collection>
+        </collection>
+    </resultMap>
     <!--
     requireAuth字段在本项目中无用，因为本字段的本来作用是，前端用来控制该权限是否需要登录，但是该功能由后端通过
     角色来控制了，所以前端也并没有判断这个字段。
@@ -83,6 +96,19 @@
         where m.id = mr.mid
           and mr.rid = r.id
         order by m.id
+    </select>
+    <select id="getAllMenus" resultMap="MenuWithChildren">
+        select m1.id as id1, m1.name as name1, m2.id as id2, m2.name as name2, m3.id as id3, m3.name as name3
+        from menu m1,
+             menu m2,
+             menu m3
+        where m1.id = m2.parentId
+          and m2.id = m3.parentId
+          and m3.enabled = true
+        order by id1, id2, id3
+    </select>
+    <select id="getMidsByRid" resultType="java.lang.Integer">
+        select mid from menu_role where rid =#{rid}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
         delete

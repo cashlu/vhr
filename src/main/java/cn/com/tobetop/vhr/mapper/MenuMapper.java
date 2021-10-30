@@ -27,4 +27,19 @@ public interface MenuMapper {
      * @return
      */
     List<Menu> getAllMenusWithRole();
+
+    /**
+     * 获取所有Menu的树状结构。
+     *
+     * @return Menu的树状结构。
+     */
+    List<Menu> getAllMenus();
+
+    /**
+     * 通过roleId，获取该Role具备的Menu的ID列表。
+     *
+     * @param rid 角色ID
+     * @return 权限（菜单）ID
+     */
+    List<Integer> getMidsByRid(Integer rid);
 }

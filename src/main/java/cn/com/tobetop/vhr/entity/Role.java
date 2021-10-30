@@ -1,5 +1,8 @@
 package cn.com.tobetop.vhr.entity;
 
+/**
+ * @author Cash
+ */
 public class Role {
     private Integer id;
 
@@ -30,4 +33,5 @@ public class Role {
     public void setNameZh(String nameZh) {
         this.nameZh = nameZh == null ? null : nameZh.trim();
     }
+
 }
