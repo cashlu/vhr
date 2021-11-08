@@ -1,8 +1,8 @@
 package cn.com.tobetop.vhr.controller.system.basic;
 
-import cn.com.tobetop.vhr.entity.Menu;
-import cn.com.tobetop.vhr.entity.RespBean;
-import cn.com.tobetop.vhr.entity.Role;
+import cn.com.tobetop.vhr.model.Menu;
+import cn.com.tobetop.vhr.model.RespBean;
+import cn.com.tobetop.vhr.model.Role;
 import cn.com.tobetop.vhr.service.MenuService;
 import cn.com.tobetop.vhr.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;

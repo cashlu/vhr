@@ -98,8 +98,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 会把验证的请求发送到这里url上，让Spring Security去处理。
                  */
                 .loginProcessingUrl("/doLogin")
-                // TODO: 前后端分离项目，这个配置貌似不需要，暂时注销掉，有问题再说
-                //.loginPage("/login")
+
 
                 // 登录成功后，将登录用户信息脱敏后，转换为json格式，封装在RespBean对象中，返回给前端。
                 //.successHandler(new AuthenticationSuccessHandler() {

@@ -1,6 +1,6 @@
 package cn.com.tobetop.vhr.exception;
 
-import cn.com.tobetop.vhr.entity.RespBean;
+import cn.com.tobetop.vhr.model.RespBean;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -8,10 +8,10 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 
 /**
- * @Program: vhr
- * @Description: 全局异常处理类
- * @Author: Cash
- * @Create: 2021-10-28 02:40
+ * @program: vhr
+ * @description: 全局异常处理类
+ * @author: Cash
+ * @create: 2021-10-28 02:40
  **/
 
 @RestControllerAdvice

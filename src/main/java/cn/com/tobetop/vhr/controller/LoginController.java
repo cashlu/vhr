@@ -1,6 +1,6 @@
 package cn.com.tobetop.vhr.controller;
 
-import cn.com.tobetop.vhr.entity.RespBean;
+import cn.com.tobetop.vhr.model.RespBean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

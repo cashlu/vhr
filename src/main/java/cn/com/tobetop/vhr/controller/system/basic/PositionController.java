@@ -1,7 +1,7 @@
 package cn.com.tobetop.vhr.controller.system.basic;
 
-import cn.com.tobetop.vhr.entity.Position;
-import cn.com.tobetop.vhr.entity.RespBean;
+import cn.com.tobetop.vhr.model.Position;
+import cn.com.tobetop.vhr.model.RespBean;
 import cn.com.tobetop.vhr.service.PositionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
 package cn.com.tobetop.vhr.config.handler;
 
-import cn.com.tobetop.vhr.entity.RespBean;
+import cn.com.tobetop.vhr.model.RespBean;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;

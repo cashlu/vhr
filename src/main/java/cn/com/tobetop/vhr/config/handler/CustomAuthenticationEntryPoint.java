@@ -1,6 +1,6 @@
 package cn.com.tobetop.vhr.config.handler;
 
-import cn.com.tobetop.vhr.entity.RespBean;
+import cn.com.tobetop.vhr.model.RespBean;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.authentication.InsufficientAuthenticationException;
 import org.springframework.security.core.AuthenticationException;
@@ -25,10 +25,13 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
     @Override
     public void commence(HttpServletRequest req, HttpServletResponse resp, AuthenticationException authException) throws IOException, ServletException {
         resp.setContentType("application/json;charset=utf-8");
+        // 401是没有认证
+        resp.setStatus(401);
         PrintWriter out = resp.getWriter();
         RespBean respBean = RespBean.error("访问失败");
         if (authException instanceof InsufficientAuthenticationException) {
-            respBean.setMsg("请求失败，请联系管理员！");
+            // 因为定义了status是401，实际上这个msg前端不会显示，前端utils/api.js中，会改写这个输出信息。
+            respBean.setMsg("Session失效，请重新登录！");
         }
         String s = new ObjectMapper().writeValueAsString(respBean);
         out.write(s);

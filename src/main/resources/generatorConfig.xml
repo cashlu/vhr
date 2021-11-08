@@ -24,7 +24,7 @@
         </javaTypeResolver>
         <!-- 生成模型的包名和位置 -->
         <!--自动生成的实体的存放包路径 -->
-        <javaModelGenerator targetPackage="cn.com.tobetop.vhr.entity" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="cn.com.tobetop.vhr.model" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>

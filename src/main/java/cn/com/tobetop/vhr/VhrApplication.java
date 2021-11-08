@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author cashlu
  */
 @SpringBootApplication
-@MapperScan(basePackages = "cn.com.tobetop.vhr.mapper")
+@MapperScan(basePackages = {"cn.com.tobetop.vhr.mapper"})
 public class VhrApplication {
 
     public static void main(String[] args) {

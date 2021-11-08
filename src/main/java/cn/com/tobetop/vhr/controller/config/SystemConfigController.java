@@ -1,6 +1,6 @@
 package cn.com.tobetop.vhr.controller.config;
 
-import cn.com.tobetop.vhr.entity.Menu;
+import cn.com.tobetop.vhr.model.Menu;
 import cn.com.tobetop.vhr.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

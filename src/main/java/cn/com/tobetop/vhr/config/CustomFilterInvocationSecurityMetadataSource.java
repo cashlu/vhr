@@ -1,7 +1,7 @@
 package cn.com.tobetop.vhr.config;
 
-import cn.com.tobetop.vhr.entity.Menu;
-import cn.com.tobetop.vhr.entity.Role;
+import cn.com.tobetop.vhr.model.Menu;
+import cn.com.tobetop.vhr.model.Role;
 import cn.com.tobetop.vhr.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;
